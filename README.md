@@ -17,4 +17,4 @@ This script only extracts the front and back sides of each card, all other data 
 It also does some transformations to the text:
 
   - Replaces `<br>` with `\n`
-  - Removed non-breaking spaces
+  - Removes non-breaking spaces
