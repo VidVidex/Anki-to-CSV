@@ -16,5 +16,5 @@ The temporary directory will be deleted after the conversion is done
 This script only extracts the front and back sides of each card, all other data is ignored.
 It also does some transformations to the text:
 
-    - Replaces `<br>` with `\n`
-    - Removed non-breaking spaces
+  - Replaces `<br>` with `\n`
+  - Removed non-breaking spaces
