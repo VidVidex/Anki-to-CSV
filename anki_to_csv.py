@@ -78,8 +78,14 @@ def extract_and_dump(apkg_file):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python script.py <file.apkg>")
+        print("Usage: python anki_to_csv.py <file.apkg>|<directory>")
     else:
-        apkg_file = sys.argv[1]
-        
-        extract_and_dump(apkg_file)
+        path = sys.argv[1]
+
+        # If the path is a directory, we'll iterate over all .apkg files in the directory, otherwise we'll just convert the file
+        if os.path.isdir(path):
+            for file in os.listdir(path):
+                if file.endswith('.apkg'):
+                    extract_and_dump(f"{path}/{file}")
+        else:
+            extract_and_dump(path)
